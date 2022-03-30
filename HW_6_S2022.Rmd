@@ -1,0 +1,84 @@
+---
+title: "Homework 6: Written Part"
+subtitle: "STAT 343: Mathematical Statistics"
+output:
+  pdf_document:
+    keep_tex: true
+header-includes:
+   - \usepackage{booktabs}
+geometry: margin=1.5cm
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+library(tidyverse)
+```
+
+\def\simiid{\stackrel{{\mbox{\text{\tiny i.i.d.}}}}{\sim}}
+
+# Details
+
+### How to Write Up
+
+The written part of this assignment can be either typeset using latex or hand written.
+
+### Grading
+
+5% of your grade on this assignment is for turning in something legible and organized
+
+An additional 15% of your grade is for completion.  A quick pass will be made to ensure that you've made a reasonable attempt at all problems.
+
+Across both the written part and the R part, in the range of 1 to 3 problems will be graded more carefully for correctness.  In grading these problems, an emphasis will be placed on full explanations of your thought process.  You don't need to write more than a few sentences for any given problem, but you should write complete sentences!  Understanding and explaining the reasons behind what you are doing is at least as important as solving the problems correctly.
+
+### Collaboration
+
+You are allowed to work with others on this assignment, but you must complete and submit your own write up.  You should not copy large blocks of code or written text from another student.
+
+### Sources
+
+You may refer to our text, Wikipedia, and other online sources.  All sources you refer to must be cited.
+
+\newpage
+
+## Problem I: Binomial Distribution
+
+We have previously found that if $X \sim \text{Binomial}(n, \theta)$ then the maximum likelihood estimator of $\theta$ is $\hat{\theta}^{MLE} = \frac{X}{n}$.  We showed that $E(\hat{\theta}^{MLE}) = \theta$, $Var(\hat{\theta}^{MLE}) = \frac{\theta(1-\theta)}{n}$, and $MSE(\hat{\theta}^{MLE}) = \frac{\theta(1-\theta)}{n}$.
+
+### (a) Is it possible for another estimator $\tilde{\Theta}$ to have lower variance than the MLE?  If so, give an example of such an estimator.  If not, explain why not with reference to a theorem from class.
+
+<!-- \vspace{7cm} -->
+
+### (b) Is it possible for another *unbiased* estimator $\tilde{\Theta}$ to have lower variance than the MLE?  If so, give an example of such an estimator.  If not, explain why not with reference to a theorem from class.
+
+\newpage
+
+## Problem II. Exponential Distribution
+
+Let $X_1,...,X_n$ be an i.i.d. sample from an exponential distribution with the density function 
+
+$$f(x|\tau)=\frac{1}{\tau}e^{-x/\tau}, \ 0 \leq x < \infty.$$
+It can be shown that the MLE of $\tau$ is $\hat{\tau}^{MLE}=\bar{X}$.
+
+### (a) Show that exact sampling distribution of the MLE is Gamma$(n, \tau/n)$? *Hint: You can use Moment Generating Functions to show this.*
+
+
+### (b) Use the Central Limit Theorem to find a normal approximation of the sampling distribution.
+
+
+
+### (c) Show that the MLE is unbiased, and find its exact variance. (*Hint: The sum of the $X_i$ follows a gamma distribution.*)
+
+
+
+### (d) Is there any other unbiased estimate with smaller variance?
+
+
+
+### (e) Find the form of an approximate $(1-\alpha)*100\%$ confidence interval for $\tau$.
+
+
+
+### (f) Find the form of an exact confidence interval for $\tau$.
+
+
+
